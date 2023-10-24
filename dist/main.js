@@ -7,8 +7,7 @@ const order_module_1 = require("./order/order.module");
 const transaction_module_1 = require("./transaction/transaction.module");
 const user_module_1 = require("./user/user.module");
 async function bootstrap() {
-    const app = await core_1.NestFactory.create(app_module_1.AppModule);
-    app.enableCors();
+    const app = await core_1.NestFactory.create(app_module_1.AppModule, { cors: true });
     const options = new swagger_1.DocumentBuilder()
         .setTitle('Trading App')
         .setDescription('API documentation for Trading App')
