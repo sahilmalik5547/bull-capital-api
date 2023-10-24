@@ -16,7 +16,8 @@ const UserSchema = new mongoose.Schema({
   pan:{type:String},
   mobile:{type:Number},
   dob:{type:Date},
-  createdAt:{type:Date},
+  createdAt:{type:Date, default: new Date().getTime()},
+  updatedAt:{type:Date, default: new Date().getTime()},
   favrouiteSymbol:{type:Array}
 });
 
